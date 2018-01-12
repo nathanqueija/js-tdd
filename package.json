@@ -1,0 +1,24 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "Javascript with TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanqueija/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Nathan Queija <nathanqcam@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathanqueija/js-tdd/issues"
+  },
+  "homepage": "https://github.com/nathanqueija/js-tdd#readme"
+}
