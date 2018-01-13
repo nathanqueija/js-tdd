@@ -19,6 +19,7 @@ function sayAnimal() {
   // variable animal belongs to this block scope
   // var are function scoped, or the are function scoped or are global
   let animal = 'cat';
+  animal = 'dog';
   console.log(animal);
 }
 
