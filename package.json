@@ -7,10 +7,26 @@
     "lint": "./node_modules/.bin/eslint src/*/*.js",
     "build": "./node_modules/.bin/webpack --colors --progress",
     "watch": "npm run build -- --watch",
-    "server": "./node_modules/.bin/webpack-dev-server --inline --open",
+    "start": "./node_modules/.bin/webpack-dev-server --inline --open",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --require babel-register",
     "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --watch --require babel-register",
-    "prepush": "npm run lint"
+    "test:coverage": "nyc npm test",
+    "prepush": "npm run lint && npm run test:coverage"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 80,
+    "statements": 80,
+    "functions":80,
+    "branches": 80,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "repository": {
     "type": "git",
@@ -37,9 +53,11 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-mocha": "^4.11.0",
     "eslint-plugin-react": "^7.5.1",
     "husky": "^0.14.3",
     "mocha": "^4.1.0",
+    "nyc": "^11.4.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0"
   },

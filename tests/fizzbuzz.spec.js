@@ -1,10 +1,14 @@
 import { expect } from 'chai';
-import fizzbuzz from '../src/fizzbuzz';
+import { fizzbuzz } from '../src/fizzbuzz';
 
 describe('FizzBuzz', () => {
   it('should return Fizz when multiple of 3', () => {
     expect(fizzbuzz(3)).to.be.equal('Fizz');
     expect(fizzbuzz(6)).to.be.equal('Fizz');
+  });
+
+  it('should return 0 when 03', () => {
+    expect(fizzbuzz(0)).to.be.equal(0);
   });
 
   it('should return Buzz when multiple of 5', () => {
