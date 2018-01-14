@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { fizzbuzz } from '../src/fizzbuzz';
+import fizzbuzz from '../src/fizzbuzz';
 
 describe('FizzBuzz', () => {
   it('should return Fizz when multiple of 3', () => {
