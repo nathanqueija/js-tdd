@@ -5,6 +5,11 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*/*.js",
+    "build": "./node_modules/.bin/webpack --colors --progress",
+    "watch": "npm run build -- --watch",
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --require babel-register",
+    "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --watch --require babel-register",
     "prepush": "npm run lint"
   },
   "repository": {
@@ -23,11 +28,24 @@
   },
   "homepage": "https://github.com/nathanqueija/js-tdd#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
-    "husky": "^0.14.3"
+    "husky": "^0.14.3",
+    "mocha": "^4.1.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS + TDD</title>
+  <script src="../build/bundle.js"></script>
+</head>
+<body>
+<script>
+  const article = {
+    title: 'Learning Template Strings',
+    intro: 'Intro of post',
+    body: 'Lorem ipsun bla bla Lorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla blaLorem ipsun bla bla',
+    tags: ['es6', 'js', 'template-literal']
+  }
+
+  const markup = `
+    <article>
+    <header>
+      <h1>${article.title}</h1>
+    </header>
+    <section>
+      <p>${article.intro}</p>
+    </section>
+    <footer>
+      <ul>
+        ${article.tags.map(tag => `<li>${tag}</li>`).join('')}
+      </ul>
+    </footer>
+    </article>
+  `;
+
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>
