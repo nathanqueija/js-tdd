@@ -9,5 +9,13 @@
   "env": {
     "node": true,
     "mocha": true
-  }
+  },
+  "overrides": [
+    {
+     "files": "tests/*.spec.js",
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
 }

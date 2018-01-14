@@ -1,6 +1,9 @@
-# Project Title
+# JS TDD 
 
-One Paragraph of project description goes here
+Mocha + Chai + Instanbul + Nyc
+
+Code coverage with git prehooks
+Minimum of 80% of coverage to push
 
 ## Getting Started
 
