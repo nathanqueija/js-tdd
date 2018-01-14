@@ -9,9 +9,10 @@
     "watch": "npm run build -- --watch",
     "start": "./node_modules/.bin/webpack-dev-server --inline --open",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --require babel-register",
-    "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --watch --require babel-register",
+    "test:watch": " ./node_modules/.bin/mocha tests/**/*.spec.js --bail --watch --require babel-register",
     "test:coverage": "nyc npm test",
-    "prepush": "pretty-quick --staged && npm run lint && npm run test:coverage"
+    "prepush": "pretty-quick --staged && npm run lint && npm run test:coverage",
+    "prettier:watch": "onchange '**/*.js' -- pretty-quick --staged"
   },
   "nyc": {
     "check-coverage": true,
@@ -57,9 +58,11 @@
     "eslint-plugin-react": "^7.5.1",
     "husky": "^0.14.3",
     "mocha": "^4.1.0",
+    "node-fetch": "^1.7.3",
     "nyc": "^11.4.1",
-    "prettier": "^1.10.2",
-    "pretty-quick": "^1.2.0",
+    "sinon": "^4.1.5",
+    "sinon-chai": "^2.14.0",
+    "sinon-stub-promise": "^4.0.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0"
   },

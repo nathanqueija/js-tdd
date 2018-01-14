@@ -1,8 +1,6 @@
 {
   "extends": "airbnb",
-  "plugins": [
-    "mocha"
-  ],
+  "plugins": ["mocha"],
   "rules": {
     "mocha/no-exclusive-tests": "error"
   },
@@ -12,7 +10,7 @@
   },
   "overrides": [
     {
-     "files": "tests/*.spec.js",
+      "files": "tests/*.spec.js",
       "rules": {
         "no-unused-expressions": "off"
       }
